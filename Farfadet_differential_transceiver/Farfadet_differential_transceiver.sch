@@ -1,0 +1,686 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:tom_kicad
+LIBS:Farfadet_differential_transceiver-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Farfadet - Differential transceiver for uC"
+Date "2018-01-25"
+Rev "1.0"
+Comp "Tom Magnier"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Conn_01x03 J4
+U 1 1 5A699DD4
+P 5550 6500
+F 0 "J4" H 5550 6700 50  0000 C CNN
+F 1 "picoBlade connector" H 5550 6300 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_PicoBlade_53047-0310_03x1.25mm_Straight" H 5550 6500 50  0001 C CNN
+F 3 "" H 5550 6500 50  0001 C CNN
+	1    5550 6500
+	1    0    0    1   
+$EndComp
+$Comp
+L SP3485CN U2
+U 1 1 5A699E9B
+P 3400 5900
+F 0 "U2" H 3100 6250 50  0000 L CNN
+F 1 "SP3485CN" H 3500 6250 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 4450 5550 50  0001 C CIN
+F 3 "" H 3400 5900 50  0001 C CNN
+	1    3400 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 5A699F3B
+P 3250 5200
+F 0 "C2" H 3260 5270 50  0000 L CNN
+F 1 "0.1uF" H 3260 5120 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3250 5200 50  0001 C CNN
+F 3 "" H 3250 5200 50  0001 C CNN
+	1    3250 5200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R_Small R2
+U 1 1 5A699FB0
+P 4050 5900
+F 0 "R2" H 4080 5920 50  0000 L CNN
+F 1 "120R" H 4080 5860 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 4050 5900 50  0001 C CNN
+F 3 "" H 4050 5900 50  0001 C CNN
+	1    4050 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R1
+U 1 1 5A69A02E
+P 4050 5650
+F 0 "R1" H 4080 5670 50  0000 L CNN
+F 1 "1k" H 4080 5610 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 4050 5650 50  0001 C CNN
+F 3 "" H 4050 5650 50  0001 C CNN
+	1    4050 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper_Dual_NC_NO_Small JP1
+U 1 1 5A69A861
+P 6550 1250
+F 0 "JP1" H 6550 1340 50  0000 C CNN
+F 1 "Jumper_Dual_NC_NO_Small" H 6560 1190 50  0001 C CNN
+F 2 "tom_kicad_lib:Solder_Jumper_3_conn_1-2" H 6510 1250 50  0001 C CNN
+F 3 "" H 6510 1250 50  0001 C CNN
+	1    6550 1250
+	1    0    0    1   
+$EndComp
+$Comp
+L TXS0101DBV U1
+U 1 1 5A69B7E3
+P 2300 3350
+F 0 "U1" H 2500 3750 50  0000 C CNN
+F 1 "TXS0101DBV" H 2600 2950 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 2950 2850 50  0001 C CNN
+F 3 "" H 2300 3320 50  0001 C CNN
+	1    2300 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C_Small C3
+U 1 1 5A69B8AA
+P 2550 2650
+F 0 "C3" H 2560 2720 50  0000 L CNN
+F 1 "0.1uF" H 2560 2570 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2550 2650 50  0001 C CNN
+F 3 "" H 2550 2650 50  0001 C CNN
+	1    2550 2650
+	1    0    0    -1  
+$EndComp
+Text Notes 600  1750 0    60   ~ 0
+I/O compatible with Teensy layout, can be used with any 5V / 3.3V system.\n5V input is not needed for 3.3V systems.
+$Comp
+L GND #PWR01
+U 1 1 5A69BB9D
+P 900 1050
+F 0 "#PWR01" H 900 800 50  0001 C CNN
+F 1 "GND" H 900 900 50  0000 C CNN
+F 2 "" H 900 1050 50  0001 C CNN
+F 3 "" H 900 1050 50  0001 C CNN
+	1    900  1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  1050 900  1000
+Wire Wire Line
+	900  1000 1550 1000
+Wire Wire Line
+	1550 1100 1050 1100
+Text Label 1050 1100 0    60   ~ 0
+RS485_RO
+Wire Wire Line
+	1550 1200 1050 1200
+Text Label 1050 1200 0    60   ~ 0
+RS485_DI
+Wire Wire Line
+	1550 1300 1050 1300
+Text Notes 1850 1450 0    60   ~ 0
+GND\nuC RX\nuC TX\nGPIO\n \n
+Text Notes 2650 1450 2    60   ~ 0
+5V\nGND\n3.3V\nGPIO\nGPIO
+Text Label 1050 1300 0    60   ~ 0
+RS485_DE
+$Comp
+L +5V #PWR02
+U 1 1 5A69BF46
+P 3000 950
+F 0 "#PWR02" H 3000 800 50  0001 C CNN
+F 1 "+5V" H 3000 1090 50  0000 C CNN
+F 2 "" H 3000 950 50  0001 C CNN
+F 3 "" H 3000 950 50  0001 C CNN
+	1    3000 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1000 3000 1000
+Wire Wire Line
+	3000 1000 3000 950 
+$Comp
+L GND #PWR03
+U 1 1 5A69BF8B
+P 3650 1100
+F 0 "#PWR03" H 3650 850 50  0001 C CNN
+F 1 "GND" H 3650 950 50  0000 C CNN
+F 2 "" H 3650 1100 50  0001 C CNN
+F 3 "" H 3650 1100 50  0001 C CNN
+	1    3650 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1100 3650 1100
+$Comp
+L +3.3V #PWR04
+U 1 1 5A69C054
+P 3250 950
+F 0 "#PWR04" H 3250 800 50  0001 C CNN
+F 1 "+3.3V" H 3250 1090 50  0000 C CNN
+F 2 "" H 3250 950 50  0001 C CNN
+F 3 "" H 3250 950 50  0001 C CNN
+	1    3250 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1200 3250 1200
+Wire Wire Line
+	3250 1200 3250 950 
+Wire Wire Line
+	2950 1300 3500 1300
+Text Label 3500 1300 2    60   ~ 0
+1WIRE_DATA
+$Comp
+L Conn_01x05 J1
+U 1 1 5A69C2EB
+P 1750 1200
+F 0 "J1" H 1750 1500 50  0000 C CNN
+F 1 "Conn_01x05" H 1750 900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 1750 1200 50  0001 C CNN
+F 3 "" H 1750 1200 50  0001 C CNN
+	1    1750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J2
+U 1 1 5A69C34E
+P 2750 1200
+F 0 "J2" H 2750 1500 50  0000 C CNN
+F 1 "Conn_01x05" H 2750 900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 2750 1200 50  0001 C CNN
+F 3 "" H 2750 1200 50  0001 C CNN
+	1    2750 1200
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 1550 1400
+Wire Wire Line
+	3500 1400 2950 1400
+Text Label 3500 1400 2    60   ~ 0
+1WIRE_EN
+Text Notes 7300 1600 2    60   ~ 0
+System 5V/3.3V selection jumper
+$Comp
+L VCC #PWR05
+U 1 1 5A69CB0B
+P 6550 1150
+F 0 "#PWR05" H 6550 1000 50  0001 C CNN
+F 1 "VCC" H 6550 1300 50  0000 C CNN
+F 2 "" H 6550 1150 50  0001 C CNN
+F 3 "" H 6550 1150 50  0001 C CNN
+	1    6550 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 1200 6550 1150
+$Comp
+L +5V #PWR06
+U 1 1 5A69CBFC
+P 6800 1150
+F 0 "#PWR06" H 6800 1000 50  0001 C CNN
+F 1 "+5V" H 6800 1290 50  0000 C CNN
+F 2 "" H 6800 1150 50  0001 C CNN
+F 3 "" H 6800 1150 50  0001 C CNN
+	1    6800 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR07
+U 1 1 5A69CC26
+P 6300 1150
+F 0 "#PWR07" H 6300 1000 50  0001 C CNN
+F 1 "+3.3V" H 6300 1290 50  0000 C CNN
+F 2 "" H 6300 1150 50  0001 C CNN
+F 3 "" H 6300 1150 50  0001 C CNN
+	1    6300 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 1150 6300 1250
+Wire Wire Line
+	6300 1250 6400 1250
+Wire Wire Line
+	6700 1250 6800 1250
+Wire Wire Line
+	6800 1250 6800 1150
+$Comp
+L C_Small C1
+U 1 1 5A69CE72
+P 1950 2650
+F 0 "C1" H 1960 2720 50  0000 L CNN
+F 1 "0.1uF" H 1960 2570 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1950 2650 50  0001 C CNN
+F 3 "" H 1950 2650 50  0001 C CNN
+	1    1950 2650
+	-1   0    0    -1  
+$EndComp
+Text Notes 7850 1750 2    60   ~ 0
+/!\ 5V systems : use a compatible RS485 transceiver !
+Wire Wire Line
+	3800 5800 5350 5800
+Wire Wire Line
+	4050 5800 4050 5750
+Connection ~ 4050 5800
+Wire Wire Line
+	3800 6000 4950 6000
+Connection ~ 4050 6000
+Text Notes 5800 6200 0    60   ~ 0
+NB : 3.3V-referenced differential bus. See TMC5130 datasheet Fig. 5.2.\n     The 1-Wire EEPROM is connected to the A signal.
+$Comp
+L GND #PWR08
+U 1 1 5A69DAF0
+P 3250 5300
+F 0 "#PWR08" H 3250 5050 50  0001 C CNN
+F 1 "GND" H 3250 5150 50  0000 C CNN
+F 2 "" H 3250 5300 50  0001 C CNN
+F 3 "" H 3250 5300 50  0001 C CNN
+	1    3250 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR09
+U 1 1 5A69DC18
+P 3400 5000
+F 0 "#PWR09" H 3400 4850 50  0001 C CNN
+F 1 "VCC" H 3400 5150 50  0000 C CNN
+F 2 "" H 3400 5000 50  0001 C CNN
+F 3 "" H 3400 5000 50  0001 C CNN
+	1    3400 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 5000 3400 5500
+Wire Wire Line
+	3400 5050 3250 5050
+Wire Wire Line
+	3250 5050 3250 5100
+Connection ~ 3400 5050
+$Comp
+L +3.3V #PWR010
+U 1 1 5A69DD72
+P 4050 5550
+F 0 "#PWR010" H 4050 5400 50  0001 C CNN
+F 1 "+3.3V" H 4050 5690 50  0000 C CNN
+F 2 "" H 4050 5550 50  0001 C CNN
+F 3 "" H 4050 5550 50  0001 C CNN
+	1    4050 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 5A69DE56
+P 3400 6300
+F 0 "#PWR011" H 3400 6050 50  0001 C CNN
+F 1 "GND" H 3400 6150 50  0000 C CNN
+F 2 "" H 3400 6300 50  0001 C CNN
+F 3 "" H 3400 6300 50  0001 C CNN
+	1    3400 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 5A69DF59
+P 5350 6000
+F 0 "#PWR012" H 5350 5750 50  0001 C CNN
+F 1 "GND" H 5350 5850 50  0000 C CNN
+F 2 "" H 5350 6000 50  0001 C CNN
+F 3 "" H 5350 6000 50  0001 C CNN
+	1    5350 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 5A69DF88
+P 5350 6600
+F 0 "#PWR013" H 5350 6350 50  0001 C CNN
+F 1 "GND" H 5350 6450 50  0000 C CNN
+F 2 "" H 5350 6600 50  0001 C CNN
+F 3 "" H 5350 6600 50  0001 C CNN
+	1    5350 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 6000 4950 5900
+Wire Wire Line
+	4950 5900 5350 5900
+Wire Wire Line
+	5150 5800 5150 6400
+Wire Wire Line
+	5150 6400 5350 6400
+Connection ~ 5150 5800
+Wire Wire Line
+	5050 5900 5050 6500
+Wire Wire Line
+	5050 6500 5350 6500
+Connection ~ 5050 5900
+Text Label 4300 5800 0    60   ~ 0
+RS485_A/1WIRE
+Text Label 4300 6000 0    60   ~ 0
+RS485_B
+$Comp
+L GND #PWR014
+U 1 1 5A69E5ED
+P 2300 3750
+F 0 "#PWR014" H 2300 3500 50  0001 C CNN
+F 1 "GND" H 2300 3600 50  0000 C CNN
+F 2 "" H 2300 3750 50  0001 C CNN
+F 3 "" H 2300 3750 50  0001 C CNN
+	1    2300 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 5A69E7DE
+P 1950 2750
+F 0 "#PWR015" H 1950 2500 50  0001 C CNN
+F 1 "GND" H 1950 2600 50  0000 C CNN
+F 2 "" H 1950 2750 50  0001 C CNN
+F 3 "" H 1950 2750 50  0001 C CNN
+	1    1950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 5A69E80D
+P 2550 2750
+F 0 "#PWR016" H 2550 2500 50  0001 C CNN
+F 1 "GND" H 2550 2600 50  0000 C CNN
+F 2 "" H 2550 2750 50  0001 C CNN
+F 3 "" H 2550 2750 50  0001 C CNN
+	1    2550 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR017
+U 1 1 5A69E920
+P 1950 2450
+F 0 "#PWR017" H 1950 2300 50  0001 C CNN
+F 1 "VCC" H 1950 2600 50  0000 C CNN
+F 2 "" H 1950 2450 50  0001 C CNN
+F 3 "" H 1950 2450 50  0001 C CNN
+	1    1950 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2450 1950 2550
+Wire Wire Line
+	1950 2500 2200 2500
+Wire Wire Line
+	2200 2500 2200 2950
+Connection ~ 1950 2500
+$Comp
+L +3.3V #PWR018
+U 1 1 5A69EA61
+P 2550 2450
+F 0 "#PWR018" H 2550 2300 50  0001 C CNN
+F 1 "+3.3V" H 2550 2590 50  0000 C CNN
+F 2 "" H 2550 2450 50  0001 C CNN
+F 3 "" H 2550 2450 50  0001 C CNN
+	1    2550 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2450 2550 2550
+Wire Wire Line
+	2550 2500 2400 2500
+Wire Wire Line
+	2400 2500 2400 2950
+Connection ~ 2550 2500
+Wire Wire Line
+	2700 3350 4200 3350
+Wire Wire Line
+	4200 3350 4200 5800
+Connection ~ 4200 5800
+Wire Wire Line
+	1900 3350 750  3350
+Text Label 750  3350 0    60   ~ 0
+1WIRE_DATA
+Wire Wire Line
+	3000 5700 2400 5700
+Wire Wire Line
+	3000 6100 2400 6100
+Wire Wire Line
+	2900 6000 3000 6000
+Wire Wire Line
+	2900 5800 2900 6000
+Wire Wire Line
+	2900 5800 3000 5800
+Wire Wire Line
+	2900 5900 2400 5900
+Connection ~ 2900 5900
+Text Label 2400 5700 0    60   ~ 0
+RS485_RO
+Text Label 2400 5900 0    60   ~ 0
+RS485_DE
+Text Label 2400 6100 0    60   ~ 0
+RS485_DI
+$Comp
+L PWR_FLAG #FLG019
+U 1 1 5A69F4E0
+P 6700 7550
+F 0 "#FLG019" H 6700 7625 50  0001 C CNN
+F 1 "PWR_FLAG" H 6700 7700 50  0000 C CNN
+F 2 "" H 6700 7550 50  0001 C CNN
+F 3 "" H 6700 7550 50  0001 C CNN
+	1    6700 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 5A69F64E
+P 6700 7550
+F 0 "#PWR020" H 6700 7300 50  0001 C CNN
+F 1 "GND" H 6700 7400 50  0000 C CNN
+F 2 "" H 6700 7550 50  0001 C CNN
+F 3 "" H 6700 7550 50  0001 C CNN
+	1    6700 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR021
+U 1 1 5A69F67D
+P 6700 7150
+F 0 "#PWR021" H 6700 7000 50  0001 C CNN
+F 1 "+3.3V" H 6700 7290 50  0000 C CNN
+F 2 "" H 6700 7150 50  0001 C CNN
+F 3 "" H 6700 7150 50  0001 C CNN
+	1    6700 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG022
+U 1 1 5A69F6F4
+P 6700 7150
+F 0 "#FLG022" H 6700 7225 50  0001 C CNN
+F 1 "PWR_FLAG" H 6700 7300 50  0000 C CNN
+F 2 "" H 6700 7150 50  0001 C CNN
+F 3 "" H 6700 7150 50  0001 C CNN
+	1    6700 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG023
+U 1 1 5A69F87A
+P 6700 6750
+F 0 "#FLG023" H 6700 6825 50  0001 C CNN
+F 1 "PWR_FLAG" H 6700 6900 50  0000 C CNN
+F 2 "" H 6700 6750 50  0001 C CNN
+F 3 "" H 6700 6750 50  0001 C CNN
+	1    6700 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR024
+U 1 1 5A69F8DB
+P 6700 6750
+F 0 "#PWR024" H 6700 6600 50  0001 C CNN
+F 1 "+5V" H 6700 6890 50  0000 C CNN
+F 2 "" H 6700 6750 50  0001 C CNN
+F 3 "" H 6700 6750 50  0001 C CNN
+	1    6700 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R3
+U 1 1 5A69FED5
+P 3200 4150
+F 0 "R3" H 3230 4170 50  0000 L CNN
+F 1 "1k" H 3230 4110 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 3200 4150 50  0001 C CNN
+F 3 "" H 3200 4150 50  0001 C CNN
+	1    3200 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3950 3200 4050
+Wire Wire Line
+	2800 4000 3200 4000
+Wire Wire Line
+	2800 3550 2800 4000
+Wire Wire Line
+	2800 3550 2700 3550
+Connection ~ 3200 4000
+$Comp
+L GND #PWR025
+U 1 1 5A6A0138
+P 3200 4250
+F 0 "#PWR025" H 3200 4000 50  0001 C CNN
+F 1 "GND" H 3200 4100 50  0000 C CNN
+F 2 "" H 3200 4250 50  0001 C CNN
+F 3 "" H 3200 4250 50  0001 C CNN
+	1    3200 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR026
+U 1 1 5A6A0189
+P 3200 3550
+F 0 "#PWR026" H 3200 3400 50  0001 C CNN
+F 1 "+3.3V" H 3200 3690 50  0000 C CNN
+F 2 "" H 3200 3550 50  0001 C CNN
+F 3 "" H 3200 3550 50  0001 C CNN
+	1    3200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L BSS84 Q1
+U 1 1 5A6A02FA
+P 3300 3750
+F 0 "Q1" H 3500 3825 50  0000 L CNN
+F 1 "BSS84" H 3500 3750 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 3500 3675 50  0001 L CIN
+F 3 "" H 3300 3750 50  0001 L CNN
+	1    3300 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 3750 4050 3750
+Text Label 4050 3750 2    60   ~ 0
+1WIRE_EN
+$Comp
+L R_Small R4
+U 1 1 5A6A0C64
+P 3550 3650
+F 0 "R4" H 3580 3670 50  0000 L CNN
+F 1 "1k" H 3580 3610 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 3550 3650 50  0001 C CNN
+F 3 "" H 3550 3650 50  0001 C CNN
+	1    3550 3650
+	-1   0    0    -1  
+$EndComp
+Connection ~ 3550 3750
+$Comp
+L +3.3V #PWR027
+U 1 1 5A6A0DA9
+P 3550 3550
+F 0 "#PWR027" H 3550 3400 50  0001 C CNN
+F 1 "+3.3V" H 3550 3690 50  0000 C CNN
+F 2 "" H 3550 3550 50  0001 C CNN
+F 3 "" H 3550 3550 50  0001 C CNN
+	1    3550 3550
+	1    0    0    -1  
+$EndComp
+Text Notes 3750 6600 2    60   ~ 0
+RS-485 transceiver
+Text Notes 800  4250 0    60   ~ 0
+Optional level shifter for 1-Wire with 5V systems.\nJP2 can be closed in 3.3V systems.
+$Comp
+L Jumper_NC_Small JP2
+U 1 1 5A6A1B6F
+P 2250 2200
+F 0 "JP2" H 2250 2280 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 2260 2140 50  0001 C CNN
+F 2 "tom_kicad_lib:Solder_Jumper_2_conn" H 2250 2200 50  0001 C CNN
+F 3 "" H 2250 2200 50  0001 C CNN
+	1    2250 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 3350 1650 2200
+Wire Wire Line
+	1650 2200 2150 2200
+Connection ~ 1650 3350
+Wire Wire Line
+	2350 2200 2950 2200
+Wire Wire Line
+	2950 2200 2950 3350
+Connection ~ 2950 3350
+$Comp
+L Conn_01x04 J3
+U 1 1 5A6A2AAC
+P 5550 5900
+F 0 "J3" H 5550 6100 50  0000 C CNN
+F 1 "XLR connector" H 5550 5600 50  0000 C CNN
+F 2 "tom_kicad_lib:Neutrik_XLR_NC3FAAH2" H 5550 5900 50  0001 C CNN
+F 3 "" H 5550 5900 50  0001 C CNN
+	1    5550 5900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5350 6000 5350 5700
+Connection ~ 5350 6000
+$EndSCHEMATC
