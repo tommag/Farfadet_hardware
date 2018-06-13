@@ -1,0 +1,683 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:modules
+LIBS:tom_kicad
+LIBS:graphic_symbols
+LIBS:mechanical
+LIBS:references
+LIBS:Farfadet_dual_transceiver_featherwing-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Farfadet - dual transceiver Feather wing"
+Date "2018-06-12"
+Rev "1.0"
+Comp "Tom Magnier"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Conn_01x12 J2
+U 1 1 5B1FDEB5
+P 2950 1700
+F 0 "J2" H 2950 2300 50  0000 C CNN
+F 1 "Conn_01x12" H 2950 1000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x12_Pitch2.54mm" H 2950 1700 50  0001 C CNN
+F 3 "" H 2950 1700 50  0001 C CNN
+	1    2950 1700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x16 J1
+U 1 1 5B1FDF93
+P 2400 1500
+F 0 "J1" H 2400 2300 50  0000 C CNN
+F 1 "Conn_01x16" H 2400 600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x16_Pitch2.54mm" H 2400 1500 50  0001 C CNN
+F 3 "" H 2400 1500 50  0001 C CNN
+	1    2400 1500
+	1    0    0    -1  
+$EndComp
+Text Notes 2150 2650 0    60   ~ 0
+Adafruit FeatherWing \n(pinout : Huzzah ESP32)
+Wire Wire Line
+	2200 800  1950 800 
+Text Label 1950 800  0    60   ~ 0
+RST
+$Comp
+L +3.3V #PWR01
+U 1 1 5B1FE142
+P 1800 850
+F 0 "#PWR01" H 1800 700 50  0001 C CNN
+F 1 "+3.3V" H 1800 990 50  0000 C CNN
+F 2 "" H 1800 850 50  0001 C CNN
+F 3 "" H 1800 850 50  0001 C CNN
+	1    1800 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 850  1800 900 
+Wire Wire Line
+	1500 900  2200 900 
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 5B1FE15F
+P 1500 850
+F 0 "#FLG02" H 1500 925 50  0001 C CNN
+F 1 "PWR_FLAG" H 1500 1000 50  0000 C CNN
+F 2 "" H 1500 850 50  0001 C CNN
+F 3 "" H 1500 850 50  0001 C CNN
+	1    1500 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 900  1500 850 
+Connection ~ 1800 900 
+NoConn ~ 2200 1000
+$Comp
+L GND #PWR03
+U 1 1 5B1FE1F6
+P 2000 950
+F 0 "#PWR03" H 2000 700 50  0001 C CNN
+F 1 "GND" H 2000 800 50  0000 C CNN
+F 2 "" H 2000 950 50  0001 C CNN
+F 3 "" H 2000 950 50  0001 C CNN
+	1    2000 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 950  2100 950 
+Wire Wire Line
+	2100 950  2100 1100
+Wire Wire Line
+	2100 1100 2200 1100
+Wire Wire Line
+	2200 1200 1950 1200
+Wire Wire Line
+	2200 1300 1950 1300
+Wire Wire Line
+	2200 1400 1950 1400
+Wire Wire Line
+	2200 1500 1950 1500
+Wire Wire Line
+	2200 1600 1950 1600
+Wire Wire Line
+	900  1700 2200 1700
+Wire Wire Line
+	2200 1800 1950 1800
+Wire Wire Line
+	2200 1900 1950 1900
+Wire Wire Line
+	2200 2000 1950 2000
+Wire Wire Line
+	900  2100 2200 2100
+Wire Wire Line
+	900  2200 2200 2200
+Wire Wire Line
+	900  2300 2200 2300
+Text Label 1950 1200 0    60   ~ 0
+A0
+Text Label 1950 1300 0    60   ~ 0
+A1
+Text Label 1950 1400 0    60   ~ 0
+A2
+Text Label 1950 1500 0    60   ~ 0
+A3
+Text Label 1950 1600 0    60   ~ 0
+A4
+Text Label 1950 1700 0    60   ~ 0
+A5
+Text Label 1950 1800 0    60   ~ 0
+SCK
+Text Label 1950 1900 0    60   ~ 0
+MOSI
+Text Label 1950 2000 0    60   ~ 0
+MISO
+Text Label 1950 2100 0    60   ~ 0
+RX
+Text Label 1950 2200 0    60   ~ 0
+TX
+Text Label 1950 2300 0    60   ~ 0
+21
+$Comp
+L VBAT #PWR04
+U 1 1 5B1FE2E7
+P 3250 1150
+F 0 "#PWR04" H 3250 1210 30  0001 C CNN
+F 1 "VBAT" H 3250 1260 50  0000 C CNN
+F 2 "" H 3250 1150 60  0000 C CNN
+F 3 "" H 3250 1150 60  0000 C CNN
+	1    3250 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1200 3250 1200
+Wire Wire Line
+	3250 1200 3250 1150
+Wire Wire Line
+	3150 1300 3400 1300
+Text Label 3400 1300 2    60   ~ 0
+EN
+$Comp
+L VBUS #PWR05
+U 1 1 5B1FE45F
+P 3550 1200
+F 0 "#PWR05" H 3550 1050 50  0001 C CNN
+F 1 "VBUS" H 3550 1350 50  0000 C CNN
+F 2 "" H 3550 1200 50  0001 C CNN
+F 3 "" H 3550 1200 50  0001 C CNN
+	1    3550 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1400 3550 1400
+Wire Wire Line
+	3550 1400 3550 1200
+Wire Wire Line
+	3150 1500 3400 1500
+Wire Wire Line
+	3150 1600 3400 1600
+Wire Wire Line
+	3150 1700 4500 1700
+Wire Wire Line
+	3150 1800 4500 1800
+Wire Wire Line
+	3150 1900 4500 1900
+Wire Wire Line
+	3150 2000 4500 2000
+Wire Wire Line
+	3150 2100 3400 2100
+Wire Wire Line
+	3150 2200 3400 2200
+Wire Wire Line
+	3150 2300 3400 2300
+Text Label 3400 1500 2    60   ~ 0
+13
+Text Label 3400 1600 2    60   ~ 0
+12
+Text Label 3400 1700 2    60   ~ 0
+27
+Text Label 3400 1800 2    60   ~ 0
+33
+Text Label 3400 1900 2    60   ~ 0
+15
+Text Label 3400 2000 2    60   ~ 0
+32
+Text Label 3400 2100 2    60   ~ 0
+14
+Text Label 3400 2200 2    60   ~ 0
+SCL
+Text Label 3400 2300 2    60   ~ 0
+SDA
+$Comp
+L SP3485CN U1
+U 1 1 5B1FE6B3
+P 7700 1750
+F 0 "U1" H 7400 2100 50  0000 L CNN
+F 1 "SP3485CN" H 7800 2100 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8750 1400 50  0001 C CIN
+F 3 "" H 7700 1750 50  0001 C CNN
+	1    7700 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1550 7300 1550
+Text Label 6600 1550 0    60   ~ 0
+RS485_RO_1
+Text Label 6600 1750 0    60   ~ 0
+RS485_DE_1
+Text Label 6600 1950 0    60   ~ 0
+RS485_DI_1
+Wire Wire Line
+	6600 1750 7200 1750
+Wire Wire Line
+	7200 1650 7200 1850
+Wire Wire Line
+	7200 1650 7300 1650
+Wire Wire Line
+	7200 1850 7300 1850
+Connection ~ 7200 1750
+Wire Wire Line
+	7300 1950 6600 1950
+$Comp
+L GND #PWR06
+U 1 1 5B1FE84F
+P 7700 2150
+F 0 "#PWR06" H 7700 1900 50  0001 C CNN
+F 1 "GND" H 7700 2000 50  0000 C CNN
+F 2 "" H 7700 2150 50  0001 C CNN
+F 3 "" H 7700 2150 50  0001 C CNN
+	1    7700 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C1
+U 1 1 5B1FE869
+P 7550 1050
+F 0 "C1" H 7560 1120 50  0000 L CNN
+F 1 "0.1uF" H 7560 970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7550 1050 50  0001 C CNN
+F 3 "" H 7550 1050 50  0001 C CNN
+	1    7550 1050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5B1FE8DE
+P 7550 1150
+F 0 "#PWR07" H 7550 900 50  0001 C CNN
+F 1 "GND" H 7550 1000 50  0000 C CNN
+F 2 "" H 7550 1150 50  0001 C CNN
+F 3 "" H 7550 1150 50  0001 C CNN
+	1    7550 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR08
+U 1 1 5B1FE90A
+P 7700 800
+F 0 "#PWR08" H 7700 650 50  0001 C CNN
+F 1 "+3.3V" H 7700 940 50  0000 C CNN
+F 2 "" H 7700 800 50  0001 C CNN
+F 3 "" H 7700 800 50  0001 C CNN
+	1    7700 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 800  7700 1350
+Wire Wire Line
+	7700 850  7550 850 
+Wire Wire Line
+	7550 850  7550 950 
+Connection ~ 7700 850 
+$Comp
+L R_Small R2
+U 1 1 5B1FEA38
+P 8550 1750
+F 0 "R2" H 8580 1770 50  0000 L CNN
+F 1 "120R" H 8580 1710 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 8550 1750 50  0001 C CNN
+F 3 "" H 8550 1750 50  0001 C CNN
+	1    8550 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R_Small R1
+U 1 1 5B1FEADA
+P 8550 1450
+F 0 "R1" H 8580 1470 50  0000 L CNN
+F 1 "1k" H 8580 1410 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 8550 1450 50  0001 C CNN
+F 3 "" H 8550 1450 50  0001 C CNN
+	1    8550 1450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 1650 10000 1650
+Wire Wire Line
+	8550 1650 8550 1550
+Wire Wire Line
+	8100 1850 9550 1850
+Connection ~ 8550 1650
+Connection ~ 8550 1850
+$Comp
+L +3.3V #PWR09
+U 1 1 5B1FEBA0
+P 8550 1300
+F 0 "#PWR09" H 8550 1150 50  0001 C CNN
+F 1 "+3.3V" H 8550 1440 50  0000 C CNN
+F 2 "" H 8550 1300 50  0001 C CNN
+F 3 "" H 8550 1300 50  0001 C CNN
+	1    8550 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 1350 8550 1300
+Text Label 8850 1650 0    60   ~ 0
+RS485_A/1_WIRE_1
+Text Label 8850 1850 0    60   ~ 0
+RS485_B_1
+$Comp
+L Conn_01x03 J3
+U 1 1 5B1FEF09
+P 10200 1750
+F 0 "J3" H 10200 1950 50  0000 C CNN
+F 1 "picoBlade" H 10200 1550 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_PicoBlade_53047-0310_03x1.25mm_Straight" H 10200 1750 50  0001 C CNN
+F 3 "" H 10200 1750 50  0001 C CNN
+	1    10200 1750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9550 1850 9550 1750
+Wire Wire Line
+	9550 1750 10000 1750
+$Comp
+L GND #PWR010
+U 1 1 5B1FF04D
+P 10000 1850
+F 0 "#PWR010" H 10000 1600 50  0001 C CNN
+F 1 "GND" H 10000 1700 50  0000 C CNN
+F 2 "" H 10000 1850 50  0001 C CNN
+F 3 "" H 10000 1850 50  0001 C CNN
+	1    10000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x04 J4
+U 1 1 5B1FF2F8
+P 10200 2450
+F 0 "J4" H 10200 2650 50  0000 C CNN
+F 1 "XLR-3" H 10200 2150 50  0000 C CNN
+F 2 "tom_kicad_lib:Neutrik_XLR_NC3FAAH2" H 10200 2450 50  0001 C CNN
+F 3 "" H 10200 2450 50  0001 C CNN
+	1    10200 2450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9900 1650 9900 2350
+Wire Wire Line
+	9900 2350 10000 2350
+Connection ~ 9900 1650
+Wire Wire Line
+	10000 2450 9800 2450
+Wire Wire Line
+	9800 2450 9800 1750
+Connection ~ 9800 1750
+$Comp
+L GND #PWR011
+U 1 1 5B1FF4B9
+P 10000 2650
+F 0 "#PWR011" H 10000 2400 50  0001 C CNN
+F 1 "GND" H 10000 2500 50  0000 C CNN
+F 2 "" H 10000 2650 50  0001 C CNN
+F 3 "" H 10000 2650 50  0001 C CNN
+	1    10000 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2250 10000 2650
+Connection ~ 10000 2550
+Text Notes 6900 5400 0    60   ~ 0
+NB: 3.3V referenced differential bus.\nThe 1-Wire EEPROM is connected to the A signal.
+$Comp
+L SP3485CN U2
+U 1 1 5B1FFC1F
+P 7700 4200
+F 0 "U2" H 7400 4550 50  0000 L CNN
+F 1 "SP3485CN" H 7800 4550 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8750 3850 50  0001 C CIN
+F 3 "" H 7700 4200 50  0001 C CNN
+	1    7700 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4000 7300 4000
+Text Label 6600 4000 0    60   ~ 0
+RS485_RO_2
+Text Label 6600 4200 0    60   ~ 0
+RS485_DE_2
+Text Label 6600 4400 0    60   ~ 0
+RS485_DI_2
+Wire Wire Line
+	6600 4200 7200 4200
+Wire Wire Line
+	7200 4100 7200 4300
+Wire Wire Line
+	7200 4100 7300 4100
+Wire Wire Line
+	7200 4300 7300 4300
+Connection ~ 7200 4200
+Wire Wire Line
+	7300 4400 6600 4400
+$Comp
+L GND #PWR012
+U 1 1 5B1FFC2F
+P 7700 4600
+F 0 "#PWR012" H 7700 4350 50  0001 C CNN
+F 1 "GND" H 7700 4450 50  0000 C CNN
+F 2 "" H 7700 4600 50  0001 C CNN
+F 3 "" H 7700 4600 50  0001 C CNN
+	1    7700 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 5B1FFC35
+P 7550 3500
+F 0 "C2" H 7560 3570 50  0000 L CNN
+F 1 "0.1uF" H 7560 3420 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7550 3500 50  0001 C CNN
+F 3 "" H 7550 3500 50  0001 C CNN
+	1    7550 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 5B1FFC3B
+P 7550 3600
+F 0 "#PWR013" H 7550 3350 50  0001 C CNN
+F 1 "GND" H 7550 3450 50  0000 C CNN
+F 2 "" H 7550 3600 50  0001 C CNN
+F 3 "" H 7550 3600 50  0001 C CNN
+	1    7550 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR014
+U 1 1 5B1FFC41
+P 7700 3250
+F 0 "#PWR014" H 7700 3100 50  0001 C CNN
+F 1 "+3.3V" H 7700 3390 50  0000 C CNN
+F 2 "" H 7700 3250 50  0001 C CNN
+F 3 "" H 7700 3250 50  0001 C CNN
+	1    7700 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3250 7700 3800
+Wire Wire Line
+	7700 3300 7550 3300
+Wire Wire Line
+	7550 3300 7550 3400
+Connection ~ 7700 3300
+$Comp
+L R_Small R4
+U 1 1 5B1FFC4B
+P 8550 4200
+F 0 "R4" H 8580 4220 50  0000 L CNN
+F 1 "120R" H 8580 4160 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 8550 4200 50  0001 C CNN
+F 3 "" H 8550 4200 50  0001 C CNN
+	1    8550 4200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R_Small R3
+U 1 1 5B1FFC51
+P 8550 3900
+F 0 "R3" H 8580 3920 50  0000 L CNN
+F 1 "1k" H 8580 3860 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 8550 3900 50  0001 C CNN
+F 3 "" H 8550 3900 50  0001 C CNN
+	1    8550 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 4100 10000 4100
+Wire Wire Line
+	8550 4100 8550 4000
+Wire Wire Line
+	8100 4300 9550 4300
+Connection ~ 8550 4100
+Connection ~ 8550 4300
+$Comp
+L +3.3V #PWR015
+U 1 1 5B1FFC5C
+P 8550 3750
+F 0 "#PWR015" H 8550 3600 50  0001 C CNN
+F 1 "+3.3V" H 8550 3890 50  0000 C CNN
+F 2 "" H 8550 3750 50  0001 C CNN
+F 3 "" H 8550 3750 50  0001 C CNN
+	1    8550 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3800 8550 3750
+Text Label 8850 4100 0    60   ~ 0
+RS485_A/1_WIRE_2
+Text Label 8850 4300 0    60   ~ 0
+RS485_B_2
+$Comp
+L Conn_01x03 J5
+U 1 1 5B1FFC65
+P 10200 4200
+F 0 "J5" H 10200 4400 50  0000 C CNN
+F 1 "picoBlade" H 10200 4000 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_PicoBlade_53047-0310_03x1.25mm_Straight" H 10200 4200 50  0001 C CNN
+F 3 "" H 10200 4200 50  0001 C CNN
+	1    10200 4200
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9550 4300 9550 4200
+Wire Wire Line
+	9550 4200 10000 4200
+$Comp
+L GND #PWR016
+U 1 1 5B1FFC6D
+P 10000 4300
+F 0 "#PWR016" H 10000 4050 50  0001 C CNN
+F 1 "GND" H 10000 4150 50  0000 C CNN
+F 2 "" H 10000 4300 50  0001 C CNN
+F 3 "" H 10000 4300 50  0001 C CNN
+	1    10000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x04 J6
+U 1 1 5B1FFC73
+P 10200 4900
+F 0 "J6" H 10200 5100 50  0000 C CNN
+F 1 "XLR-3" H 10200 4600 50  0000 C CNN
+F 2 "tom_kicad_lib:Neutrik_XLR_NC3FAAH2" H 10200 4900 50  0001 C CNN
+F 3 "" H 10200 4900 50  0001 C CNN
+	1    10200 4900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9900 4100 9900 4800
+Wire Wire Line
+	9900 4800 10000 4800
+Connection ~ 9900 4100
+Wire Wire Line
+	10000 4900 9800 4900
+Wire Wire Line
+	9800 4900 9800 4200
+Connection ~ 9800 4200
+$Comp
+L GND #PWR017
+U 1 1 5B1FFC7F
+P 10000 5100
+F 0 "#PWR017" H 10000 4850 50  0001 C CNN
+F 1 "GND" H 10000 4950 50  0000 C CNN
+F 2 "" H 10000 5100 50  0001 C CNN
+F 3 "" H 10000 5100 50  0001 C CNN
+	1    10000 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 4700 10000 5100
+Connection ~ 10000 5000
+Text Label 900  2200 0    60   ~ 0
+RS485_DI_1
+Text Label 900  2100 0    60   ~ 0
+RS485_RO_1
+Text Label 900  2300 0    60   ~ 0
+RS485_DE_1
+Text Label 900  1700 0    60   ~ 0
+RS485_A/1_WIRE_1
+Text Label 4500 1700 2    60   ~ 0
+RS485_RO_2
+Text Label 4500 1900 2    60   ~ 0
+RS485_DE_2
+Text Label 4500 1800 2    60   ~ 0
+RS485_DI_2
+Text Label 4500 2000 2    60   ~ 0
+RS485_A/1_WIRE_2
+$Comp
+L PWR_FLAG #FLG018
+U 1 1 5B2009F6
+P 1500 1000
+F 0 "#FLG018" H 1500 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 1500 1150 50  0000 C CNN
+F 2 "" H 1500 1000 50  0001 C CNN
+F 3 "" H 1500 1000 50  0001 C CNN
+	1    1500 1000
+	1    0    0    1   
+$EndComp
+Connection ~ 2000 950 
+Wire Wire Line
+	1500 950  1500 1000
+NoConn ~ 1950 1200
+NoConn ~ 1950 1300
+NoConn ~ 1950 1400
+NoConn ~ 1950 1500
+NoConn ~ 1950 1600
+NoConn ~ 1950 1800
+NoConn ~ 1950 1900
+NoConn ~ 1950 2000
+NoConn ~ 3400 2300
+NoConn ~ 3400 2200
+NoConn ~ 3400 2100
+NoConn ~ 3400 1600
+NoConn ~ 3400 1500
+NoConn ~ 3400 1300
+NoConn ~ 1950 800 
+$Comp
+L Housing MK1
+U 1 1 5B200FF4
+P 10100 6000
+F 0 "MK1" H 10250 6000 50  0000 L CNN
+F 1 "Adafruit Featherwing" H 10250 5925 50  0000 L CNN
+F 2 "tom_kicad_lib:PCB_FeatherWing" H 10150 6050 50  0001 C CNN
+F 3 "" H 10150 6050 50  0001 C CNN
+	1    10100 6000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
